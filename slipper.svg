@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Soft Realistic Drop Shadow -->
+    <filter id="slipperShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="4" dy="6" stdDeviation="4" flood-color="#0b132b" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Strap Shadow onto Footbed -->
+    <filter id="strapShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#002855" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Insole Gradients (Legendary Dép Lào Blue) -->
+    <linearGradient id="insoleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#48cae4"/>
+      <stop offset="35%" stop-color="#0096c7"/>
+      <stop offset="80%" stop-color="#0077b6"/>
+      <stop offset="100%" stop-color="#023e8a"/>
+    </linearGradient>
+
+    <!-- Outsole & Thickness Gradients -->
+    <linearGradient id="outsoleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#03045e"/>
+      <stop offset="100%" stop-color="#001233"/>
+    </linearGradient>
+
+    <!-- Strap Gradient (Vibrant Sunny Yellow Rubber) -->
+    <linearGradient id="strapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff3b0"/>
+      <stop offset="25%" stop-color="#ffd166"/>
+      <stop offset="70%" stop-color="#f77f00"/>
+      <stop offset="100%" stop-color="#d62828"/>
+    </linearGradient>
+
+    <linearGradient id="strapHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#slipperShadow)">
+    <!-- Natural slap angle: tilted -35 degrees so toe points top-left and heel bottom-right -->
+    <g transform="rotate(-35, 60, 60)">
+
+      <!-- 1. Bottom Tread / Outsole 3D Depth (Layer 1 - Dark navy rubber) -->
+      <path d="M 60 16 C 52 16, 39 20, 37 32 C 35 44, 41 57, 43 69 C 44 79, 45 89, 47 97 C 49 105, 54 110, 60 110 C 66 110, 71 105, 73 97 C 75 89, 78 77, 79 63 C 80 49, 80 35, 77 25 C 75 17, 67 16, 60 16 Z"
+            fill="url(#outsoleGrad)" stroke="#000814" stroke-width="2.5"/>
+
+      <!-- 2. Midsole Layer (Layer 2 - White foam sandwich line) -->
+      <path d="M 60 14 C 52 14, 39 18, 37 30 C 35 42, 41 55, 43 67 C 44 77, 45 87, 47 95 C 49 103, 54 108, 60 108 C 66 108, 71 103, 73 95 C 75 87, 78 75, 79 61 C 80 47, 80 33, 77 23 C 75 15, 67 14, 60 14 Z"
+            fill="#edf2f4" stroke="#8d99ae" stroke-width="1.5"/>
+
+      <!-- 3. Top Footbed / Insole (Layer 3 - Main Blue Sole) -->
+      <path d="M 60 12 C 52 12, 39 16, 37 28 C 35 40, 41 53, 43 65 C 44 75, 45 85, 47 93 C 49 101, 54 106, 60 106 C 66 106, 71 101, 73 93 C 75 85, 78 73, 79 59 C 80 45, 80 31, 77 21 C 75 13, 67 12, 60 12 Z"
+            fill="url(#insoleGrad)" stroke="#00509d" stroke-width="2"/>
+
+      <!-- Insole Texture: Tread grip ridges / contour lines -->
+      <path d="M 44 38 Q 60 41 72 37" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M 45 46 Q 60 49 74 45" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M 46 54 Q 60 57 74 53" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M 47 62 Q 60 65 73 61" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M 48 70 Q 60 73 72 69" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M 49 78 Q 60 81 71 77" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M 51 86 Q 60 88 69 85" stroke="#90e0ef" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+      <!-- Heel Star / Logo Print -->
+      <circle cx="60" cy="94" r="6" fill="#ffe066" opacity="0.9"/>
+      <polygon points="60,89 61.5,93 65.5,93 62.5,95.5 63.5,99.5 60,97 56.5,99.5 57.5,95.5 54.5,93 58.5,93" fill="#f77f00"/>
+
+      <!-- 4. Straps (Quai kẹp hình chữ V) with drop shadow -->
+      <g filter="url(#strapShadow)">
+        <!-- Left Strap (from toe post to left inner sole) -->
+        <path d="M 53 32 C 50 38, 43 47, 40 60 C 39 63, 43 65, 45 62 C 48 52, 53 42, 56 36 Z"
+              fill="url(#strapGrad)" stroke="#c1121f" stroke-width="1.2"/>
+        <!-- Left Strap Highlight reflection -->
+        <path d="M 52 34 C 49 40, 44 49, 42 60"
+              stroke="url(#strapHighlight)" stroke-width="1.8" fill="none"/>
+
+        <!-- Right Strap (from toe post to right outer sole) -->
+        <path d="M 55 33 C 58 39, 68 47, 74 57 C 76 60, 79 58, 78 55 C 72 44, 63 36, 58 32 Z"
+              fill="url(#strapGrad)" stroke="#c1121f" stroke-width="1.2"/>
+        <!-- Right Strap Highlight reflection -->
+        <path d="M 57 34 C 61 40, 69 47, 75 56"
+              stroke="url(#strapHighlight)" stroke-width="1.8" fill="none"/>
+
+        <!-- Center Toe Thong Post (Nút kẹp giữa ngón chân) -->
+        <ellipse cx="54" cy="32" rx="4.5" ry="4" fill="url(#strapGrad)" stroke="#780000" stroke-width="1.5"/>
+        <ellipse cx="54" cy="31" rx="2.5" ry="2" fill="#fff3b0" opacity="0.8"/>
+      </g>
+    </g>
+  </g>
+</svg>
+

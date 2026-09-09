@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac a Mole</title>
+    <link rel="stylesheet" href="mole.css">
+    <script src="mole.js"></script>
+</head>
+<body>
+    <button id="help-btn" title="Hướng dẫn chơi">?</button>
+    <button id="menu-btn">Menu</button>
+    <h1>Whac a Mole</h1>
+    <h2 id="score">0</h2>
+    <div id="lives">❤️❤️❤️</div> 
+    <!-- 3x3 -->
+    <div id="board">
+    </div>
+     <!-- Modal Menu Popup -->
+    <div id="menu-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>PAUSED</h2>
+            <button id="resume-btn" class="btn">Resume</button>
+            <button id="restart-btn" class="btn">Restart</button>
+            <!-- Khu vực chỉnh âm lượng -->
+            <div class="volume-container">
+                <div class="volume-row">
+                    <span class="vol-label">🎵 BGM</span>
+                    <input type="range" id="bgm-slider" min="0" max="1" step="0.05" value="0.8">
+                </div>
+                <div class="volume-row">
+                    <span class="vol-label">🔊 SFX</span>
+                    <input type="range" id="sfx-slider" min="0" max="1" step="0.05" value="0.8">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Hướng Dẫn Chơi -->
+    <div id="instruction-modal" class="modal hidden">
+        <div class="modal-content instruction-box">
+            <h2>HƯỚNG DẪN</h2>
+            <div class="instruction-body">
+                <div class="inst-item">
+                    <img class="inst-icon-img" src="./slipper.svg" alt="Dép kẹp">
+                    <div>
+                        <strong>Vũ khí dép kẹp:</strong> Di chuyển chuột để nhắm mục tiêu bằng mũi dép, bấm chuột trái để vỗ dép đập chuột.
+                    </div>
+                </div>
+                <div class="inst-item">
+                    <img class="inst-icon-img" src="./monty-mole.png" alt="Chuột Monty">
+                    <div>
+                        <strong>Chuột Monty (+10đ):</strong> Đập thật nhanh khi chuột nhô lên. Mỗi chú chuột chỉ tính điểm 1 lần duy nhất, đập tiếp vào vị trí đó sẽ không có tiếng và không được cộng điểm!
+                    </div>
+                </div>
+                <div class="inst-item">
+                    <img class="inst-icon-img" src="./piranha-plant.png" alt="Cây Piranha">
+                    <div>
+                        <strong>Cây Piranha (-1 ❤️):</strong> Tuyệt đối không đập vào cây gai! Đập trúng sẽ bị trừ 1 mạng (bạn có tổng cộng 3 mạng, hết mạng là Game Over).
+                    </div>
+                </div>
+                <div class="inst-item">
+                    <img class="inst-icon-img" src="./pipe.png" alt="Ống nước">
+                    <div>
+                        <strong>Tăng tốc độ:</strong> Khi đạt mốc 50đ và 400đ, chuột và cây sẽ xuất hiện với tốc độ ngày càng nhanh hơn!
+                    </div>
+                </div>
+            </div>
+            <button id="close-instruction-btn" class="btn">Đã Hiểu</button>
+        </div>
+    </div>
+    <!-- Chiếc dép kẹp thay thế chuột người chơi -->
+    <img id="slipper" src="./slipper.svg" alt="Slipper">
+</body>
+</html>
+
